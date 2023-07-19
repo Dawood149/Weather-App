@@ -72,7 +72,7 @@ const HomePage = () => {
       </div>
 {/* -----------------------------------------------------7-DAY FORECAST */}
 <div className='rounded-3xl min-h- w-96 bg-slate-800 text-white border-2 float-right'>
-
+  
 </div>
 
     </Layout>
