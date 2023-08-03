@@ -1,5 +1,6 @@
 import React from 'react'
 import { Layout } from '../components/Layout'
+import SevenDayForecastItems from './../components/SevenDayForecast'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTemperatureThreeQuarters, faDroplet, faWind, faSun } from '@fortawesome/free-solid-svg-icons'
 
@@ -70,10 +71,12 @@ const HomePage = () => {
 
         </div>
       </div>
-{/* -----------------------------------------------------7-DAY FORECAST */}
-<div className='rounded-3xl min-h- w-96 bg-slate-800 text-white border-2 float-right'>
-  
-</div>
+      {/* -----------------------------------------------------7-DAY FORECAST */}
+      <div className='rounded-3xl h-auto w-96 bg-slate-800 text-white float-right mt-10 mr-16
+       flex flex-col justify-center items-center		'>
+        <h5 className='px-10 py-4 font-extrabold	'>7-DAY Forecast</h5>
+        <SevenDayForecastItems />
+      </div>
 
     </Layout>
   )

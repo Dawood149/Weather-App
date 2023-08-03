@@ -1,13 +1,20 @@
-import './App.css';
-import { useState } from 'react';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom'
+
+
 import HomePage from './Pages/home_page';
+import Cities from './Pages/cities_page';
 
 
 function App() {
 
   return (
     <>
-      <HomePage />
+    <Routes>
+      <Route path='/' element={<HomePage/>}/>
+      <Route path='/cities' element={<Cities/>}/>
+
+    </Routes>
     </>
 
   );
