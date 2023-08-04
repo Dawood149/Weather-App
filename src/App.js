@@ -10,11 +10,11 @@ function App() {
 
   return (
     <>
-    <Routes>
-      <Route path='/' element={<HomePage/>}/>
-      <Route path='/cities' element={<Cities/>}/>
+      <Routes>
+        <Route path='/' element={<HomePage />} />
+        <Route path='/cities' element={<Cities />} />
 
-    </Routes>
+      </Routes>
     </>
 
   );
