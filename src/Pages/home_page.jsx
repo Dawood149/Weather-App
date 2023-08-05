@@ -1,18 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
+
 import { Layout } from '../components/Layout'
 import SevenDayForecastItems from './../components/SevenDayForecast'
+import Input from './../components/InputField/input field'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTemperatureThreeQuarters, faDroplet, faWind, faSun } from '@fortawesome/free-solid-svg-icons'
 
 const HomePage = () => {
+  const [weather, setWeather] = useState(null); // State to hold weather data
+
+  console.log(weather);
   return (
     <Layout>
+
+      <Input setWeather={setWeather} />
       {/* --------------------------------SECTION-1 */}
       <div className=' color text-white absolute h-56 w-3/5 
       left-36 top-20 flex'>
 
         <div>
-          <h1 className='text-4xl	font-bold	'>CityName</h1>
+          <h1 className='text-4xl	font-bold	'>{weather.name}</h1>
           <p className='py-2'>chance of rain</p>
           <h1 className='text-4xl absolute top-36 font-bold	'>31&deg;</h1>
         </div>

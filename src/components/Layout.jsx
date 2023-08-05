@@ -6,7 +6,7 @@ import SideNav from "./SideNav/side-nav"
 export const Layout = (props) => {
     return (
       <div>
-          <Input/>
+          {/* <Input/> */}
          <main>
           {props.children}
           </main>
