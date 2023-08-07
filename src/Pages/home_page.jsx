@@ -7,27 +7,41 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTemperatureThreeQuarters, faDroplet, faWind, faSun } from '@fortawesome/free-solid-svg-icons'
 
 const HomePage = () => {
-  const [weather, setWeather] = useState(null); // State to hold weather data
-
+  const [weather, setWeather] = useState({}); // State to hold weather data
   console.log(weather);
   return (
+
     <Layout>
 
       <Input setWeather={setWeather} />
+
       {/* --------------------------------SECTION-1 */}
-      <div className=' color text-white absolute h-56 w-3/5 
+
+
+
+
+
+      {typeof weather.main !== "undefined" ? (
+        <div> {/* Main div for ternary operator */}
+
+          <div className=' color text-white absolute h-56 w-3/5 
       left-36 top-20 flex'>
+            <div>
+              <h1 className='text-4xl	font-bold	'>{weather.name}</h1>
+              <p className='py-2'>Chances of rain</p>
+              <h1 className='text-4xl absolute top-36 font-bold	'>{weather.main.temp - 273}&deg;</h1>
+            </div>
 
-        <div>
-          <h1 className='text-4xl	font-bold	'>{weather.name}</h1>
-          <p className='py-2'>chance of rain</p>
-          <h1 className='text-4xl absolute top-36 font-bold	'>31&deg;</h1>
-        </div>
+            <div className='absolute end-0 top-24'>
+              <h1>sun image</h1>
+            </div> </div>
 
-        <div className='absolute end-0 top-24'>
-          <h1>sun image</h1>
-        </div>
-      </div>
+        </div>  /* Main div for ternary operator */
+      ) : (
+        ""
+      )}
+
+
       {/* --------------------------------------------------SECTION-2 */}
       <div className='rounded-3xl h-52 w-3/5 absolute left-36 top-80 flex bg-slate-800 text-white'>
         <h7 className='py-3 px-3 '>TODAY'S FORECAST</h7>
@@ -61,7 +75,7 @@ const HomePage = () => {
 
           <div><FontAwesomeIcon icon={faTemperatureThreeQuarters} size="xl" />
             <span>Real Feel</span>
-            <p className='text-3xl font-bold'>30&deg;</p>
+            <p className='text-3xl font-bold'>&deg;</p>
           </div>
 
           <div> <FontAwesomeIcon icon={faDroplet} size="xl" />
