@@ -9,6 +9,7 @@ import { faTemperatureThreeQuarters, faDroplet, faWind, faSun } from '@fortaweso
 const HomePage = () => {
   const [weather, setWeather] = useState({}); // State to hold weather data
 
+  
   //console.log(weather);
 
   return (
@@ -31,8 +32,9 @@ const HomePage = () => {
               <h1 className='text-4xl absolute top-36 font-bold	'>{weather.list[0].main.temp}&deg;C</h1>
             </div>
 
-            <div className='absolute end-0 top-24'>
-              <h1>SunImage</h1>
+           
+            <div className='absolute end-0 top-15'>
+              <img src="" alt="" />
             </div> </div>
 
           {/* --------------------------------------------------SECTION-2 */}
@@ -89,6 +91,14 @@ const HomePage = () => {
             </div>
           </div>
 
+          {/* -----------------------------------------------------7-DAY FORECAST */}
+          <div className='rounded-3xl h-auto w-96 bg-slate-800 text-white float-right mt-10 mr-16
+       flex flex-col justify-center items-center		'>
+            <h5 className='px-10 py-4 font-extrabold	'>5-DAY Forecast</h5>
+
+            <SevenDayForecastItems weatherData={weather} />
+          </div>
+
         </div>  /* Main div for ternary operator */
       ) : (
         ""
@@ -96,13 +106,7 @@ const HomePage = () => {
 
 
 
-      {/* -----------------------------------------------------7-DAY FORECAST */}
-      <div className='rounded-3xl h-auto w-96 bg-slate-800 text-white float-right mt-10 mr-16
-       flex flex-col justify-center items-center		'>
-        <h5 className='px-10 py-4 font-extrabold	'>7-DAY Forecast</h5>
 
-        <SevenDayForecastItems weatherData={weather} />
-      </div>
 
 
     </Layout>

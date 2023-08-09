@@ -9,12 +9,12 @@ import Cities from './Pages/cities_page';
 //Not complete yet
 function App() {
 
- /*  const fetchWeather = async () => {
-    const data = await getWeatherData('weather', { q: 'london' })
-    console.log(data);
-  };
-
-  fetchWeather(); */
+  /*  const fetchWeather = async () => {
+     const data = await getWeatherData('weather', { q: 'london' })
+     console.log(data);
+   };
+ 
+   fetchWeather(); */
 
   return (
     <>
