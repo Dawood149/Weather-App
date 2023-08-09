@@ -1,6 +1,7 @@
 import React from 'react'
 
-const SevenDayForecastItems = () => {
+const SevenDayForecastItems = ({ weatherData }) => {
+    console.log(weatherData);
     return (
         <>
             <div className='flex py-8'>

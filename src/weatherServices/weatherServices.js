@@ -1,4 +1,4 @@
-const API_KEY = "26fc6cfe7008f0eea4d290cb5b459a58";
+/* const API_KEY = "26fc6cfe7008f0eea4d290cb5b459a58";
 const BASE_URL = "https://api.openweathermap.org/data/2.5"
 
 
@@ -10,25 +10,25 @@ const getWeatherData = (infoType, searchParams) => {
         .then((res) => res.json())
 };
 
-const formattedCurrentWeather = (data) =>{
+const formattedCurrentWeather = (data) => {
     const {
-        coord:{lat,lon},
-        main: {temp, feels_like, temp_min, temp_max, humidity},
+        coord: { lat, lon },
+        main: { temp, feels_like, temp_min, temp_max, humidity },
         name,
-        weather, 
-        wind:{speed}
-    }=data
-    
-    const {main:details, icon}=weather[0]
+        weather,
+        wind: { speed }
+    } = data
 
-    return{lat, lon, temp, feels_like, temp_min, temp_max, name, details,icon,speed }
+    const { main: details, icon } = weather[0]
+
+    return { lat, lon, temp, feels_like, temp_min, temp_max, name, details, icon, speed }
 }
 
-const getFormattedWeatherData = (searchParams)=>{
-const formattedCurrentWeather = await getWeatherData
-('weather', searchParams).then(formattedCurrentWeather)
+const getFormattedWeatherData = (searchParams) => {
+    const formattedCurrentWeather = await getWeatherData
+        ('weather', searchParams).then(formattedCurrentWeather)
 
-return formattedCurrentWeather
+    return formattedCurrentWeather
 }
 
-export default getFormattedWeatherData;
+export default getFormattedWeatherData; */

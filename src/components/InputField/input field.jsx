@@ -3,18 +3,20 @@ import { useState } from 'react';
 
 const Input = ({ setWeather }) => {
     const api = {
-        key: '15852cf91078f2774bbec60a58bb3c44',
+        key: '26fc6cfe7008f0eea4d290cb5b459a58',
         base: "https://api.openweathermap.org/data/2.5/",
     }
     const [search, setSearch] = useState("");
     /* const [weather, setWeather]=useState({}); */
     const searchPressed = () => {
-        fetch(`${api.base}weather?q=${search}&units=metrics&&APPID=${api.key}`)
+        fetch(`${api.base}forecast?q=${search}&units=metric&appid=${api.key}`)
             .then(res => res.json())
             .then(results => {
                 setWeather(results)
+                
             });
-
+                
+            // ${api.base}weather?q=${search}&units=metrics&&APPID=${api.key} // one you were using before
 
     }
     return (
