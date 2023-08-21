@@ -9,7 +9,7 @@ import { faTemperatureThreeQuarters, faDroplet, faWind, faSun } from '@fortaweso
 const HomePage = () => {
   const [weather, setWeather] = useState({}); // State to hold weather data
 
-  
+
   //console.log(weather);
 
   return (
@@ -32,11 +32,10 @@ const HomePage = () => {
               <h1 className='text-4xl absolute top-36 font-bold	'>{weather.list[0].main.temp}&deg;C</h1>
             </div>
 
-           
-            <div className='absolute end-0 top-15'>
-              <img src="" alt="" />
-            </div> </div>
 
+            <div className='absolute end-0 top-15'>
+              <img src={`https://openweathermap.org/img/wn/${weather.list[0].weather[0].icon}@4x.png`} alt="" />
+            </div> </div>
           {/* --------------------------------------------------SECTION-2 */}
 
           <div className='rounded-3xl h-52 w-3/5 absolute left-36 top-80 flex bg-slate-800 text-white'>
@@ -44,22 +43,22 @@ const HomePage = () => {
 
 
             <ul className='flex items-center	justify-items-center space-x-10'>
-              <li> <div>{weather.list[0].dt_txt}</div> IMAGE <div>{weather.list[0].main.temp}&deg;</div></li>
+              <li> <div>{weather.list[0].dt_txt}</div> <img src={`https://openweathermap.org/img/wn/${weather.list[0].weather[0].icon}@4x.png`} alt="" /> <div>{weather.list[0].main.temp}&deg;</div></li>
               <div className="border-2 border-white h-28 opacity-10"></div>
 
-              <li> <div>{weather.list[1].dt_txt}</div> image <div>{weather.list[1].main.temp}&deg;</div></li>
+              <li> <div>{weather.list[1].dt_txt}</div> <img src={`https://openweathermap.org/img/wn/${weather.list[1].weather[0].icon}@4x.png`} alt="" /> <div>{weather.list[1].main.temp}&deg;</div></li>
               <div className="border-2 border-white h-28 opacity-10"></div>
 
-              <li> <div>{weather.list[2].dt_txt}</div> image <div>{weather.list[2].main.temp}&deg;</div></li>
+              <li> <div>{weather.list[2].dt_txt}</div> <img src={`https://openweathermap.org/img/wn/${weather.list[2].weather[0].icon}@4x.png`} alt="" /> <div>{weather.list[2].main.temp}&deg;</div></li>
               <div className="border-2 border-white h-28 opacity-10"></div>
 
-              <li> <div>{weather.list[3].dt_txt}</div> image <div>{weather.list[3].main.temp}&deg;</div></li>
+              <li> <div>{weather.list[3].dt_txt}</div> <img src={`https://openweathermap.org/img/wn/${weather.list[3].weather[0].icon}@4x.png`} alt="" /> <div>{weather.list[3].main.temp}&deg;</div></li>
               <div className="border-2 border-white h-28 opacity-10"></div>
 
-              <li> <div>{weather.list[4].dt_txt}</div> image <div>{weather.list[4].main.temp}&deg;</div></li>
+              <li> <div>{weather.list[4].dt_txt}</div> <img src={`https://openweathermap.org/img/wn/${weather.list[4].weather[0].icon}@4x.png`} alt="" /> <div>{weather.list[4].main.temp}&deg;</div></li>
               <div className="border-2 border-white h-28 opacity-10"></div>
 
-              <li> <div>{weather.list[5].dt_txt}</div> image  <div>{weather.list[5].main.temp}&deg;</div></li>
+              <li> <div>{weather.list[5].dt_txt}</div> <img src={`https://openweathermap.org/img/wn/${weather.list[5].weather[0].icon}@4x.png`} alt="" />  <div>{weather.list[5].main.temp}&deg;</div></li>
             </ul>
 
           </div>
