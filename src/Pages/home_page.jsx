@@ -39,7 +39,7 @@ const HomePage = () => {
           {/* --------------------------------------------------SECTION-2 */}
 
           <div className='rounded-3xl h-52 w-3/5 absolute left-36 top-80 flex bg-slate-800 text-white'>
-            <h6 className='py-3 px-3 '>TODAY'S FORECAST</h6>
+            <h6 className='py-3 px-3 '>TODAY'S FORECAST </h6>
 
 
             <ul className='flex items-center	justify-items-center space-x-10'>
