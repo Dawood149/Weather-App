@@ -9,7 +9,7 @@ import Input from './../components/InputField/input field'
 const Cities = () => {
   return (
     <Layout>
-      <Input/>
+      <Input />
 
       <div className='text-white float-right mt-10 mr-16 h-auto'>
         <div className='h-auto w-96 text-white flex'>
@@ -31,7 +31,7 @@ const Cities = () => {
         <Today_Fore_Cities />
 
         <hr className='w-72' />
-        <Three_DayFore_Cities/>
+        <Three_DayFore_Cities />
       </div>
 
 

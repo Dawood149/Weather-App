@@ -9,8 +9,23 @@ import { faTemperatureThreeQuarters, faDroplet, faWind, faSun } from '@fortaweso
 const HomePage = () => {
   const [weather, setWeather] = useState({}); // State to hold weather data
 
+  function tConvert(time) {
+    const [hours, minutes] = time.split(':');
+    let suffix = 'AM';
 
-  //console.log(weather);
+    let hour = parseInt(hours, 10);
+    if (hour >= 12) {
+      suffix = 'PM';
+      if (hour > 12) {
+        hour -= 12;
+      }
+    }
+    if (hour === 0) {
+      hour = 12;
+    }
+
+    return `${hour}:${minutes} ${suffix}`;
+  }
 
   return (
 
@@ -35,7 +50,8 @@ const HomePage = () => {
 
             <div className='absolute end-0 top-15'>
               <img src={`https://openweathermap.org/img/wn/${weather.list[0].weather[0].icon}@4x.png`} alt="" />
-            </div> </div>
+            </div>
+          </div>
           {/* --------------------------------------------------SECTION-2 */}
 
           <div className='rounded-3xl h-52 w-3/5 absolute left-36 top-80 flex bg-slate-800 text-white'>
@@ -43,10 +59,10 @@ const HomePage = () => {
 
 
             <ul className='flex items-center	justify-items-center space-x-10'>
-              <li> <div>{weather.list[0].dt_txt}</div> <img src={`https://openweathermap.org/img/wn/${weather.list[0].weather[0].icon}@4x.png`} alt="" /> <div>{weather.list[0].main.temp}&deg;</div></li>
+              <li> <div>{tConvert(weather.list[0].dt_txt)}</div> <img src={`https://openweathermap.org/img/wn/${weather.list[0].weather[0].icon}@4x.png`} alt="" /> <div>{weather.list[0].main.temp}&deg;</div></li>
               <div className="border-2 border-white h-28 opacity-10"></div>
 
-              <li> <div>{weather.list[1].dt_txt}</div> <img src={`https://openweathermap.org/img/wn/${weather.list[1].weather[0].icon}@4x.png`} alt="" /> <div>{weather.list[1].main.temp}&deg;</div></li>
+              <li> <div>{tConvert(weather.list[1].dt_txt)}</div> <img src={`https://openweathermap.org/img/wn/${weather.list[1].weather[0].icon}@4x.png`} alt="" /> <div>{weather.list[1].main.temp}&deg;</div></li>
               <div className="border-2 border-white h-28 opacity-10"></div>
 
               <li> <div>{weather.list[2].dt_txt}</div> <img src={`https://openweathermap.org/img/wn/${weather.list[2].weather[0].icon}@4x.png`} alt="" /> <div>{weather.list[2].main.temp}&deg;</div></li>

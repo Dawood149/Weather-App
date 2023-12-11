@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSearch } from '@fortawesome/free-solid-svg-icons'; // Corrected icon import
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'; // Corrected icon import
 
 
 const Input = ({ setWeather }) => {
@@ -24,10 +24,10 @@ const Input = ({ setWeather }) => {
     return (
 
         <div className="absolute left-28 w-full">
-            <input className='rounded-lg h-10 w-3/5 px-2 bg-slate-800 border-none text-white' type="text"
+            <input className=' outline-none rounded-lg h-10 w-3/5 px-2 bg-slate-800 border-none text-white' type="text"
                 onChange={(e) => setSearch(e.target.value)} placeholder='Search for cities' />
-            <button className='text-white w-16 rounded-full bg-slate-800 h-10 p-2'
-                onClick={searchPressed}><FontAwesomeIcon icon={faSearch} bounce size="xl" />
+            <button className='text-white w-16 rounded-full bg-slate-800 h-10 p-2 hover:bg-sky-600 transition duration-200'
+                onClick={searchPressed}><FontAwesomeIcon icon={faMagnifyingGlass} />
             </button>
         </div>
     )
